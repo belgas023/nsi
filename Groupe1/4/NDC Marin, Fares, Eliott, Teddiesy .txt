@@ -1,0 +1,22 @@
+﻿Mission : Défense Galactique
+
+
+Vous êtes aux commandes d’un vaisseau spatial d’élite, chargé de défendre la galaxie contre une invasion massive d’extraterrestres déterminés à anéantir toute forme de vie !
+
+
+Objectif : 
+Repoussez les vagues ennemies en tirant sans relâche à grand coup de canon laser. Chaque tir compte, chaque seconde est cruciale.
+
+
+Attention !
+Si un ennemi parvient à franchir vos défenses, vous perdrez une vie.
+À partir d’une cinquantaine d’ennemis vaincus, l’ennemi entrera dans une fureur incontrôlable, redoublant de puissance et de rapidité. Il est de votre devoir de tenir bon face à cette offensive !
+ROMPEZ !
+
+
+Contrôles : 
+
+Flèche de gauche = Aller à gauche 
+Flèche de droite = Aller à droite 
+Espace = Tirer 
+Touche “R” = Rejouer

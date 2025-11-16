@@ -1,0 +1,19 @@
+﻿Dodge Music
+ ²k, §/
+But du Jeu :
+
+
+Un jeune ninja de l'académie de combat musicale, Ryoku, s'entraîne pour devenir le plus grand maître du son et du silence. Dans son monde, l'harmonie est une arme, et le rythme une règle sacrée.
+Mais lorsqu'un ancien instrument interdit, le Métronome Chaotique, est réactivé, des notes de musique démoniaques s’échappent et attaquent tout sur leur passage.
+Libérés par son pouvoir, les Gardiens du Métronome, des ennemis redoutables contrôlés par le rythme, envahissent les terres sacrées. Ryoku n’a qu’une solution : plonger au cœur de la tempête sonore et esquiver, en rythme, les attaques millimétrées de ces gardes musicaux.
+Dans ce jeu d’action rythmé, chaque battement compte. Danse entre les notes, évite les pièges sonores, et prouve que le silence peut vaincre la cacophonie.
+
+
+Commandes :
+
+
+Le jeu se joue à l’horizontale sur 5 voies sur lequel le joueur se déplace.   
+Le joueur a le choix entre 2 niveaux de difficulté avant de lancer le jeu. Il doit d’abord cliquer sur 1 ou 2 sur son clavier pour choisir son niveau de difficulté puis cliquer sur la touche “entrer” pour débuter le niveau.
+Le joueur ne dispose seulement que de deux commandes pour se déplacer : 
+* ↑ :  Pour passer d’une voie inférieure à une voie supérieure.
+* ↓ : Pour passer d’une voie supérieure à une voie inférieure.

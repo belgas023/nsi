@@ -1,0 +1,16 @@
+Bienvenu dans le jeu ArgentMax
+Vous êtes un aventurier dans une maison hanté. Vous avez vu dans un journal que cette maison regorgait de trésors,
+vous y êtes donc allé pour gagner beaucoup d'argent. En franchissant la porte d'entré, vous avez perdu connaissance,
+vous vous réveillez dans une pièce dans la maison. Vous pouvez vous déplacer avec les flèches directionnelles, vous
+devez rentrer chez vous, mais pour cela, vous êtes contraint de récupérer toute les pièces de la pièce avant
+d'acceder à la pièce suivante, attention aux squellettes pouvant léviter, passer à travers les murs et qui vous
+foncent dessus.
+Il vous font des dếgats et si vos vies décendent à 0, vous mouriez.
+Pour vous défendre, faites un clique droit sur la souris, les squellettes seront repoussés et ne peuvent être tués.
+Vous pouvez aussi récupérer des pouvoirs dans des boites bonus afin de mieux vous défendre.
+Vous pouvez aller plus vite, avoir un projectiles qui va plus vite, un projectile plus rapide, une capacité à
+repousser les ennemis améliorée, vous pouvez attirer les ennemis à un endroit précis ou avoir un aimant.
+Pour les utiliser, utiliser la touche gauche de votre souris.
+Faites attention à l'antagoniste final Bonne chance.
+
+

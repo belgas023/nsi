@@ -1,0 +1,17 @@
+﻿**UNIVERS / THÈME CHOISI**:
+Univers 2025 2.pyxres
+
+
+**MODE D'EMPLOI**
+Déplacez vous avec les touches ZQSD ou WASD.  
+Les flèches directionnelles quant à elles permettent de lancer des projectiles dans la direction indiquée.
+
+
+**PRÉSENTATION / EXPLICATIONS**
+Bienvenue dans Knight Call vous incarnez le célèbre chevalier “Kivansky” propriétaire du royaume de Berkyl. Après avoir passé une longue journée à gérer la paperasse du royaume, vous décidez de sortir prendre l’air. Cependant, pendant votre promenade vous tombez nez à nez avec des soldats squelettes du royaume Blade. Ce royaume est dirigé par un mage qui se trouve être votre pire ennemis. 
+
+
+Faites donc attention à vous jeune chevalier, car ils ont été chargés de vous assassiner afin de s’emparer de votre royaume. A vous de les repousser le plus longtemps possible en évitant donc de vous faire tuer. 
+
+
+Si vous résistez suffisamment, vous pourrez alors en finir avec votre pire ennemi de toujours.

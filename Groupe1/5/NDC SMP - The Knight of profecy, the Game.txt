@@ -1,0 +1,19 @@
+﻿THE KNIGHT OF PROPHECY
+→ Vous êtes un puissant chevalier, protecteur du royaume. Vous êtes cependant attaqué par une attaque ennemie de squelettes.
+Saurez-vous vous montrer vaillant et survivre face à cette invasion ?
+
+
+Règles et Déroulement du jeu :
+- Les ennemis se déplacent aléatoirement de gauche à droite toutes les 4 secondes.
+- Vous commencez avec 3 vies. 
+- Si vous vous faites toucher par un ennemi, celui-ci meurt (et donc disparait et réapparait quelques secondes plus tard) 
+et vous perdez 1 vie sur les 3.
+- Au bout de 0 vie, vous avez perdu, un "Game Over" s'affiche. Votre nombre de vies est représenté par le nombre de cœurs 
+affichés en bas à gauche de l'écran
+- Pour éliminer un ennemi vous pouvez le taper à l'épée
+- Au bout de 10 squelettes éliminés, vous débloquez une nouvelle épée plus grande mais les ennemis se déplacent plus vite !
+
+
+Commandes :
+Se déplacer : Utilisez les flèches directionnelles (gauche, droite et du haut) pour vous déplacer de gauche à droite et pour sauter.
+Attaque à l'épée : Utilisez la flèche directionnelle du bas pour attaquer avec votre épée.
