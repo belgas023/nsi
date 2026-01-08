@@ -8,23 +8,22 @@ def fusion(liste1, liste2):
     Valeur renvoyée : une seule liste triée
     """
 
-    m1, m2 = 0, 0 #marqueurs
+    m1, m2 = 0, 0
     nouv_liste = []
-    while m1!=len(liste1)-1 and m2!=len(liste2)-1:
+    while m1!=len(liste1) or m2!=len(liste2):
         if liste1[m1]>liste2[m2]:
             nouv_liste.append(liste2[m2])
             m2+=1
         else:
             nouv_liste.append(liste1[m1])
             m1+=1
-    if m1 < len(liste1)-1:    # ajoute le reste de la liste
-        for i in liste1[m1:]:
-            nouv_liste.append(i)
-    if m2 < len(liste2)-1:
-        for i in liste2[m2:]:
-            nouv_liste.append(i)
+    if m1 < len(liste1):
+        nouv_liste.append(liste1[m1:]
+    if m2 < len(liste2):
+        nouv_liste.append(liste2[m2:])
     return nouv_liste
         
+print(fusion([3, 6, 7],[1, 8]))           
 print(fusion([3, 6, 7],[1, 8]))
 assert(fusion([3, 6, 7],[1, 8])) == [1, 3, 6, 7, 8]
 assert(fusion([-3, 8],[0, 1, 8])) == [-3, 0, 1, 8, 8]
