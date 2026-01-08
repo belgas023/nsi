@@ -9,8 +9,8 @@ def recherche_balayage(liste, valeur):
     Valeur renvoyée :
         True si la valeur a été trouvée et False sinon
     """
-    for i in liste:
-        if i == valeur:
+    for item in liste:
+        if item == valeur:
             return True
     return False 
 
@@ -34,18 +34,17 @@ def recherche_dichotomie(liste, valeur):
     Valeur renvoyée :
         True si la valeur a été trouvée et False sinon
     """
-    fin = len(liste)-1
-    debut = 0
-    while debut <= fin:
-        milieu = (debut+fin)//2
-        if valeur == liste[milieu]:
+    a = 0
+    b = len(liste) - 1
+    while a <= b:
+        i = (a+b) // 2
+        if liste[i] == valeur:
             return True
-        elif valeur > liste[milieu]:
-            debut = milieu +1
+        elif liste[i] < valeur:
+            a = i + 1
         else:
-            fin = milieu -1
+            b = i - 1
     return False
-            
 
 assert not recherche_dichotomie([26, 27, 36, 52, 59, 72, 75], 56)
 assert recherche_dichotomie([26, 27, 36, 52, 59, 72, 75], 75)
@@ -73,12 +72,17 @@ def recherche_dichotomie_recursive(liste, valeur, a=0, b=-10):
         True si la valeur a été trouvée et False sinon
     """
     if b == -10:
-        b = len(liste)-1
+        b = len(liste) - 1
     if a <= b:
-        i=(a+b)//2
+        i = (a+b) // 2
         if liste[i] == valeur:
             return True
-        elif 
+        elif liste[i] < valeur:
+            return recherche_dichotomie_recursive(liste, valeur, i + 1, b)
+        else:
+            return recherche_dichotomie_recursive(liste, valeur, a, i - 1)
+    return False
+
 assert not recherche_dichotomie_recursive([26, 27, 36, 52, 59, 72, 75], 56)
 assert recherche_dichotomie_recursive([26, 27, 36, 52, 59, 72, 75], 75)
 assert not recherche_dichotomie_recursive([9, 14, 28, 29, 29, 34, 37, 44, 67, 72, 81, 92, 96], 78)
@@ -90,3 +94,4 @@ assert recherche_dichotomie_recursive([0, 3, 11, 16, 17, 19, 32, 39, 45, 69, 72,
 #4) Comparer la complexité des 2 méthodes (balayage et dichotomie),
 #   c'est à dire évaluer "en gros" le nombre de comparaisons que l'on fait
 #   à chaque fois "dans le pire des cas" pour une liste de taille n.
+
