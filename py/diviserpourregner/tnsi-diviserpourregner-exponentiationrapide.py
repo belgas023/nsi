@@ -68,4 +68,4 @@ assert exp_rapide(-3, 2) == 9
 #   Comparer la complexité des 2 méthodes
 
 #On va faire 9 multiplication
-#
+#sa complexité est log(n) donc complexité logarithmique
