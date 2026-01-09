@@ -45,8 +45,13 @@ def trifusion(liste):
     Entrée : liste est une liste non triée de nombres
     Valeur renvoyée : liste triée
     """
-    pass
+    if len(liste)==1:
+        return liste
+    else:
+        milieu = len(liste)//2
+        return fusion(trifusion(liste[:milieu]), trifusion(liste[milieu:]))
 
+print(trifusion([66, 78, 1, 37, 92]))
 assert(trifusion([66, 78, 1, 37, 92])) == [1, 37, 66, 78, 92]
 assert(trifusion([83, 47, 31, -5, 11, 49, 3, 25])) == [-5, 3, 11, 25, 31, 47, 49, 83]
 assert(trifusion([25, -6, 84, 41, 72, 99, -3, 14, -8, 87, 58])) == [-8, -6, -3, 14, 25, 41, 58, 72, 84, 87, 99]
