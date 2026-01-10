@@ -46,8 +46,19 @@ def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    listeQ1 = tableau[quadrant_1[0][quadrant_1[1]]
-    
+    tableau_modele = tableau
+    q1 = quadrant_1
+    q2 = quadrant_2
+ 
+    #remplace 1er qudrant par 2eme quadrant
+    tableau[q1[0]][q1[1]:q1[1]+n] = tableau[q2[0]][q2[1]:q2[1]+n]
+    tableau[q1[0]+n-1][q1[1]:q1[1]+n] = tableau[q2[0]+n-1][q2[1]:q2[1]+n]
+ 
+    #remplace 2eme qudrant par 1er qudrant a partire du qudrant modéle
+    tableau[q2[0]][q2[1]:q2[1]+n] = tableau_modele[q1[0]][q1[1]:q1[1]+n]
+    tableau[q2[0]+n-1][q2[1]:q2[1]+n] = tableau_modele[q1[0]+n-1][q1[1]:q1[1]+n]
+
+    return tableau 
     
 
 
@@ -72,8 +83,10 @@ def tourne_recursif(tableau, carré, n):
 
 
 # Lancement de l'algorithme sur un tableau de nombres
-# n = 8
-# tab = crée_tableau(n)
-# affiche_tableau(tab)
+n = 4
+tab = cree_tableau(n)
+affiche_tableau(tab)
+permute_quadrants(tab, (0,0), (2,2), n//2)
+affiche_tableau(tab)
 # tourne_recursif(tab, (0, 0), n)
 # affiche_tableau(tab)

@@ -2,9 +2,17 @@ def cree_tableau(n):
     liste = []
     a = 1
     for i in range(n):
-        liste.append([a+j+i for j in range(n)])
-        a+=2
+        ligne=[]
+        for j in range(n):
+            ligne.append(a)
+            a+=1
+        liste.append(ligne)
     return liste
+
+def affiche_tableau(tableau):
+    for ligne in tableau:
+        print(*ligne, sep="\t")
+    print()
 
 def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     """
@@ -18,17 +26,58 @@ def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    indice_q1_debut = 
-    listeQ1 = tableau[quadrant_1[0]][quadrant_1[1]]
-    listeQ2 = tableau[quadrant_2[0]][quadrant_2[1]]
+    #indiceQ1 = tableau[ q1[0] ][ q1[1] ] #donne 1er valeur quadrant 1
+    #indiceQ2 = tableau[ q2[0] ][ q2[1] ] #donne 1er valeur quadrant 2
+    tableau_modele = tableau
+    q1 = quadrant_1
+    q2 = quadrant_2
+
+    listeQ1 = [tableau[q1[0]][q1[1]:q1[1]+n],tableau[q1[0]+n-1][q1[1]:q1[1]+n]]
+    listeQ2 = [tableau[q2[0]][q2[1]:q2[1]+n],tableau[q2[0]+n-1][q2[1]:q2[1]+n]]
+    #renvoie liste des valeurs des quandrant 
+    #sous forme [[1,2],
+    #            [4,5]]
     
+    #remplacage:
+    tableau[q1[0]][q1[1]:q1[1]+n] = tableau[q2[0]][q2[1]:q2[1]+n]
+    tableau[q1[0]+n-1][q1[1]:q1[1]+n] = tableau[q2[0]+n-1][q2[1]:q2[1]+n]
+
+    tableau[q2[0]][q2[1]:q2[1]+n] = tableau_buffer[q1[0]][q1[1]:q1[1]+n]
+    tableau[q2[0]+n-1][q2[1]:q2[1]+n] = tableau_buffer[q1[0]+n-1][q1[1]:q1[1]+n]
+    return tableau
+
+
+
+
 tableau = cree_tableau(4)
-quadrant_1 = (0,0)
-quadrant_2 = (2,2)
+tableau_buffer = cree_tableau(4)
+q1 = (0,0)
+q2 = (2,2)
 n = 2
 
-print(tableau)
-print(tableau[quadrant_1[0]][quadrant_1[1]])
-print(tableau[quadrant_2[0]][quadrant_2[1]])
+print("==Initial==")                
+print("tableau:")
+affiche_tableau(tableau)
 
-                
+print(f"indice q1: {tableau[q1[0]][q1[1]]}")
+print(f"indice q2: {tableau[q2[0]][q2[1]]}")
+
+listeQ1 = [tableau[q1[0]][q1[1]:q1[1]+n],
+           tableau[q1[0]+n-1][q1[1]:q1[1]+n]]
+
+listeQ2 = [tableau[q2[0]][q2[1]:q2[1]+n],
+           tableau[q2[0]+n-1][q2[1]:q2[1]+n]]
+
+print(f"quadrant 1: {listeQ1}")
+print(f"quadrant 2: {listeQ2}")
+
+print("==Remplacage==")                
+#remplace ligne1 et 2 de quadrant 1 par ligne 1 et 2 de qudrant 2
+tableau[q1[0]][q1[1]:q1[1]+n] = tableau[q2[0]][q2[1]:q2[1]+n]
+tableau[q1[0]+n-1][q1[1]:q1[1]+n] = tableau[q2[0]+n-1][q2[1]:q2[1]+n]
+
+tableau[q2[0]][q2[1]:q2[1]+n] = tableau_buffer[q1[0]][q1[1]:q1[1]+n]
+tableau[q2[0]+n-1][q2[1]:q2[1]+n] = tableau_buffer[q1[0]+n-1][q1[1]:q1[1]+n]
+
+print("tableau:")
+affiche_tableau(tableau)
