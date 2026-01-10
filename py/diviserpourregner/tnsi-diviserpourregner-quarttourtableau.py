@@ -46,7 +46,7 @@ def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    tableau_modele = tableau
+    tableau_modele = cree_tableau(n*2)
     q1 = quadrant_1
     q2 = quadrant_2
  
