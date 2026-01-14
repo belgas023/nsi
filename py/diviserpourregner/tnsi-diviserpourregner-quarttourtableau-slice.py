@@ -46,16 +46,17 @@ def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    q1a = quadrant_1[0]
-    q1b = quadrant_1[1]
-    q2a = quadrant_2[0]
-    q2b = quadrant_2[1]
-
-    for ligne in len(tableau)//2:
-        for colonne in len(tableau)//2:
-            tableau[q1a][q1b]
-
-            
+    tableau_modele = cree_tableau(n*2)
+    q1 = quadrant_1
+    q2 = quadrant_2
+ 
+    #remplace 1er qudrant par 2eme quadrant
+    tableau[q1[0]][q1[1]:q1[1]+n] = tableau[q2[0]][q2[1]:q2[1]+n]
+    tableau[q1[0]+n-1][q1[1]:q1[1]+n] = tableau[q2[0]+n-1][q2[1]:q2[1]+n]
+ 
+    #remplace 2eme qudrant par 1er qudrant a partire du qudrant modéle
+    tableau[q2[0]][q2[1]:q2[1]+n] = tableau_modele[q1[0]][q1[1]:q1[1]+n]
+    tableau[q2[0]+n-1][q2[1]:q2[1]+n] = tableau_modele[q1[0]+n-1][q1[1]:q1[1]+n]
 
     return tableau 
     
