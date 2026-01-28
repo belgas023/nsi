@@ -39,14 +39,14 @@ on obtient comme parcours : 'A', 'B', 'F', 'C', 'D', 'G', 'H', 'E', 'I'
 Ecrire et tester la fonction ci-dessous
 """
 def parcours_largeur_itératif(sommet_départ, graphe):
+    file = [sommet_départ]
     sommets_visite = []
-    file_sommets_a_faire = [sommet_départ]
-    while len(file_sommets_a_faire) > 0:
-        plus_ancien_sommet = file_sommets_a_faire.pop(0)
-        if plus_ancien_sommet not in sommets_visite:
-            sommets_visite.append(plus_ancien_sommet)
-            for i in graphe[plus_ancien_sommet]:
-                file_sommets_a_faire.append(i)
+    while len(file) > 0:
+        sommet = file.pop(0)
+        if sommet not in sommets_visite:
+            sommets_visite.append(sommet)
+            for i in graphe[sommet]:
+                file.append(i)
     return sommets_visite
     
         
@@ -111,21 +111,18 @@ def parcours_profondeur_récursif(sommet_départ, graphe, sommets_visités:list)
     sommets_visités.append(sommet_départ)
     for i in graphe[sommet_départ]:
         if i not in sommets_visités:
-            return parcours_profondeur_récursif(i,graphe, sommets_visités)
+            parcours_profondeur_récursif(i,graphe, sommets_visités)
     
     
 sommets_visités = []
 parcours_profondeur_récursif("A", mongraphe, sommets_visités)
-print(sommets_visités)
 assert sommets_visités == ['A', 'B', 'C', 'E', 'I', 'D', 'G', 'F', 'H']
 
 sommets_visités = []
-print(sommets_visités)
 parcours_profondeur_récursif("C", mongraphe, sommets_visités)
 assert sommets_visités == ['C', 'B', 'A', 'F', 'G', 'I', 'D', 'E', 'H']
 
 sommets_visités = []
-print(sommets_visités)
 parcours_profondeur_récursif("H", mongraphe, sommets_visités)
 assert sommets_visités == ['H', 'F', 'A', 'B', 'C', 'E', 'I', 'D', 'G']
 
