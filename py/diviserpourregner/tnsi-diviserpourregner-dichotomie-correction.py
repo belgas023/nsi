@@ -41,9 +41,9 @@ def recherche_dichotomie(liste, valeur):
         if liste[i] == valeur:
             return True
         elif liste[i] < valeur:
-            a = i + 1
+            a = i+1
         else:
-            b = i - 1
+            b = i-1
     return False
 
 assert not recherche_dichotomie([26, 27, 36, 52, 59, 72, 75], 56)

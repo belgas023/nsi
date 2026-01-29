@@ -38,7 +38,7 @@ on obtient comme parcours : 'A', 'B', 'F', 'C', 'D', 'G', 'H', 'E', 'I'
 """
 Ecrire et tester la fonction ci-dessous
 """
-def parcours_largeur_itératif(sommet_départ, graphe):
+def parcours_largeur_itératif(sommet_départ, graphe): # algo qui marche pour largeur et profondeur (juste changer file/pile)
     file = [sommet_départ]
     sommets_visite = []
     while len(file) > 0:
@@ -116,14 +116,17 @@ def parcours_profondeur_récursif(sommet_départ, graphe, sommets_visités:list)
     
 sommets_visités = []
 parcours_profondeur_récursif("A", mongraphe, sommets_visités)
+print(sommets_visités)
 assert sommets_visités == ['A', 'B', 'C', 'E', 'I', 'D', 'G', 'F', 'H']
 
 sommets_visités = []
 parcours_profondeur_récursif("C", mongraphe, sommets_visités)
+print(sommets_visités)
 assert sommets_visités == ['C', 'B', 'A', 'F', 'G', 'I', 'D', 'E', 'H']
 
 sommets_visités = []
 parcours_profondeur_récursif("H", mongraphe, sommets_visités)
+print(sommets_visités)
 assert sommets_visités == ['H', 'F', 'A', 'B', 'C', 'E', 'I', 'D', 'G']
 
 
