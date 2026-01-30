@@ -78,7 +78,10 @@ def recherche_dichotomie_recursive(liste, valeur, a=0, b=-10):
         i=(a+b)//2
         if liste[i] == valeur:
             return True
-        elif 
+        elif liste[i] <= valeur:
+            return recherche_dichotomie_recursive(liste, valeur, i +1, b)
+        else:
+            return recherche_dichotomie_recursive(liste, valeur, a, i-1)
 assert not recherche_dichotomie_recursive([26, 27, 36, 52, 59, 72, 75], 56)
 assert recherche_dichotomie_recursive([26, 27, 36, 52, 59, 72, 75], 75)
 assert not recherche_dichotomie_recursive([9, 14, 28, 29, 29, 34, 37, 44, 67, 72, 81, 92, 96], 78)

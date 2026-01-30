@@ -34,25 +34,25 @@ def trouve_chemin(sommet_départ, sommet_arrivée, graphe):
             for i in graphe[sommet]:
                 file.append(i)
                 provenance.update({i:sommet})
-                
-
-    # 2ème temps : Reconstitution du chemin parcouru en partant de la fin 
-    print(provenance)
-    a = sommet_départ
-    resultat = []
-    while a != sommet_arrivée:
-        print(a)
-        resultat.append(a)
-        a = provenance[a]
-    resultat.append(a)
-    return resultat
+    #2eme temps: refaire chemin a l'inverse en prenant chemin + court
+#     print(provenance)
+#     a = sommet_départ
+#     resultat = []
+#     while a != sommet_arrivée:
+#         print(a)
+#         resultat.append(a)
+#         a = provenance[a]
+#     resultat.append(a)
+#     return resultat
+    return provenance
         
         
-print(trouve_chemin('A', 'H', mongraphe))
-assert trouve_chemin("A", "H", mongraphe) == ['A', 'E', 'H']
-print(trouve_chemin("B", "H", mongraphe))
-assert trouve_chemin("B", "H", mongraphe) == ['B', 'F', 'H']
+# print(trouve_chemin('A', 'H', mongraphe))
+# assert trouve_chemin("A", "H", mongraphe) == ['A', 'E', 'H']
+# print(trouve_chemin("B", "H", mongraphe))
+# assert trouve_chemin("B", "H", mongraphe) == ['B', 'F', 'H']
 
+print(trouve_chemin("D", "C", mongraphe))
 assert trouve_chemin("D", "C", mongraphe) == ['D', 'A', 'B', 'C']
 assert trouve_chemin("H", "C", mongraphe) == ['H', 'E', 'C']
 assert trouve_chemin("D", "H", mongraphe) == ['D', 'I', 'H']

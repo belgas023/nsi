@@ -17,13 +17,16 @@ def fusion(liste1, liste2):
         else:
             nouv_liste.append(liste1[m1])
             m1+=1
+             
     if m1!=len(liste1):
         for i in liste1[m1:]:
             nouv_liste.append(i)
     if m2!= len(liste2):
         for i in liste2[m2:]:
             nouv_liste.append(i)
-    return nouv_liste 
+    return nouv_liste
+#     nouv_liste.extend(liste1[m1:])
+#     nouv_liste.extend(liste2[m2:])
         
 print(fusion([3, 6, 7],[1, 8]))
 assert(fusion([3, 6, 7],[1, 8])) == [1, 3, 6, 7, 8]
