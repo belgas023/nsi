@@ -1,16 +1,18 @@
 masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
-message_chiffré = []
+message = "Message secret"    
 
-for i in masque:
-    message_chiffré.append(ord(i))
-
-print(message_chiffré)
-
-for i in message_chiffré:
-    print(chr(i))
-    
 def chiffre(message, masque):
-    message_crypté = ""
-    for i in len(range(message)):
-        message_chiffré += ord(message[i]) ^ ord(masque[i])
-        
+    message_crypté = [] 
+    for i in range(len(message)):
+        message_crypté.append(ord(message[i]) ^ ord(masque[i]))
+    return message_crypté
+
+def dechiffre(message, masque):
+    message_decrypté = ""
+    for i in range(len(message)):
+        message_decrypté += chr( message[i] ^ ord(masque[i]) )
+    return message_decrypté
+         
+
+print(chiffre(message, masque))
+print(dechiffre( chiffre(message, masque) , masque))
