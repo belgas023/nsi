@@ -10,7 +10,7 @@ def fusion(liste1, liste2):
 
     m1, m2 = 0, 0 #marqueurs
     nouv_liste = []
-    while m1!=len(liste1) and m2!=len(liste2):
+    while m1!=len(liste1) or m2!=len(liste2):
         if liste1[m1]>liste2[m2]:
             nouv_liste.append(liste2[m2])
             m2+=1
