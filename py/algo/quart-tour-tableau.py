@@ -1,7 +1,3 @@
-# On cherche ici à comprendre le principe de l'algorithme en l'appliquant à un tableau de nombres :
-# -> Compléter les fonctions ci-dessous en testant bien chaque fonction
-#    avant de passer à la suivante ;-)
-
 def cree_tableau(n):
     """
     Crée un tableau carré de taille n x n.
@@ -46,16 +42,9 @@ def permute_quadrants(tableau, quadrant_1, quadrant_2, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    q1a = quadrant_1[0]
-    q1b = quadrant_1[1]
-    q2a = quadrant_2[0]
-    q2b = quadrant_2[1]
-
-    for ligne in len(tableau)//2:
-        for colonne in len(tableau)//2:
-            tableau[q1a][q1b]
-
-            
+    for i in range(n):
+        for j in range(n):
+            tableau[quadrant_1[0] + i][quadrant_1[1] + j], tableau[quadrant_2[0] + i][quadrant_2[1] + j] = tableau[quadrant_2[0] + i][quadrant_2[1] + j], tableau[quadrant_1[0] + i][quadrant_1[1] + j]
 
     return tableau 
     
@@ -78,20 +67,23 @@ def tourne_recursif(tableau, carré, n):
     Valeur renvoyée :
         Ne renvoie rien mais modifie le tableau donné en entrée
     """
-    tableau_modele = cree_tableau(n)
-    #declarer les autres tuples celon carré == diviser par 4
-    q1, q2, q3, q4 = carré, (0,n//2), (n//2,0), (n//2,n//2)
-    
+    if n >= 2:
+        quadrant_A = (carré[0]+0,    carré[1]+0)
+        quadrant_B = (carré[0]+0,    carré[1]+n//2)
+        quadrant_C = (carré[0]+n//2, carré[1]+n//2)
+        quadrant_D = (carré[0]+n//2, carré[1]+0)
+        permute_quadrants(tableau, quadrant_A, quadrant_B, n//2)
+        permute_quadrants(tableau, quadrant_A, quadrant_C, n//2)
+        permute_quadrants(tableau, quadrant_A, quadrant_D, n//2)
+        tourne_recursif(tableau, quadrant_A, n//2)
+        tourne_recursif(tableau, quadrant_B, n//2)
+        tourne_recursif(tableau, quadrant_C, n//2)
+        tourne_recursif(tableau, quadrant_D, n//2)
 
-    for i in n:
-       # tableau[q2[0]][q2[1]:q2[1]+n] = tableau[q1[0]][q1[1]:q1[1]+n]
-       # tableau[q2[0]+n-1][q2[1]:q2[1]+n] = tableau[q1[0]+n-1][q1[1]:q1[1]+n]
 
 # Lancement de l'algorithme sur un tableau de nombres
-n = 4
-tab = cree_tableau(n)
+n = 8
+tab = crée_tableau(n)
 affiche_tableau(tab)
-permute_quadrants(tab, (0,0), (2,2), n//2)
+tourne_recursif(tab, (0, 0), n)
 affiche_tableau(tab)
-# tourne_recursif(tab, (0, 0), n)
-# affiche_tableau(tab)

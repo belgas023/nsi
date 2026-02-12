@@ -1,5 +1,3 @@
-# 1) Implémenter en Python la fonction fusion ci-dessous :
-
 def fusion(liste1, liste2):
     """
     Cette fonction fusionne 2 listes triées en une seule liste triée
