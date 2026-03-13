@@ -1,4 +1,6 @@
+# rendu monnaie iteratif
 from math import inf
+
 def rendu_monnaie_glouton(monnaie, somme_à_rendre):
     """
     Paramètres :
@@ -13,10 +15,10 @@ def rendu_monnaie_glouton(monnaie, somme_à_rendre):
     res = 0 # ce qu'on renvoie
     reste = somme_à_rendre 
 
-    for piece in monnaie: # pour chacune des pieces
-        while reste >= piece: # tant que le reste souscrvable par la piece
-            reste -= piece # soustrait le reste par la piece
-            res += 1 # incremente nombre piece a rendre
+     for piece in monnaie: # pour chacune des pieces
+         while reste >= piece: # tant que le reste souscrvable par la piece
+             reste -= piece # soustrait le reste par la piece
+             res += 1 # incremente nombre piece a rendre
 
     if reste >0:
         return inf
@@ -60,7 +62,7 @@ def rendu_monnaie_recursif(monnaie, somme_à_rendre):
         if reste - piece >=0:
             resultat = rendu_monnaie_recursif(monnaie, reste - piece)
             if resultat != inf:
-                best = min(best, resultat)
+                best = min(best, 1 + resultat) # pourquoi 1 + resultat
     return best
 
 print(rendu_monnaie_recursif((100, 10, 5, 3, 2), 8) )
