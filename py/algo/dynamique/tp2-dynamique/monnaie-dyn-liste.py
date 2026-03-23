@@ -1,3 +1,4 @@
+# 
 from math import inf
 
 def rendu_monnaie_itératif_avec_liste_pièces(monnaie, somme_à_rendre):
